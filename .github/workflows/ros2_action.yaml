@@ -53,10 +53,9 @@ jobs:
         with:
           target-ros2-distro: ${{ matrix.ros_distribution }}
           package-name: |
-            cr_action_server
-            cr_interface
+            cr_action_servers
+            cr_interfaces
             cr_moveit
             cr_vision
             cr_task_orchestration
             cr_scene_management
-            
