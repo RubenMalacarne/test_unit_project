@@ -59,3 +59,6 @@ jobs:
           target-ros2-distro: ${{ matrix.ros_distribution }}
           package-name: |
             pkg_test
+          skip-rosdep: false
+          import-token: ${{ secrets.GH_TOKEN }}
+          vcs-repo-file-url: ""
