@@ -33,6 +33,12 @@ jobs:
       - name: Setup workspace
         run: mkdir -p ros_ws/src
 
+
+      - name: Install Git
+        run: |
+          apt-get update
+          apt-get install -y git
+
       - name: Checkout code and setup workspace
         uses: actions/checkout@v4
         with:
