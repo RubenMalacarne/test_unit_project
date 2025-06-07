@@ -33,12 +33,6 @@ jobs:
       - name: Setup workspace
         run: mkdir -p ros_ws/src
 
-
-      - name: Install Git
-        run: |
-          apt-get update
-          apt-get install -y git
-
       - name: Checkout code and setup workspace
         uses: actions/checkout@v4
         with:
@@ -59,6 +53,3 @@ jobs:
           target-ros2-distro: ${{ matrix.ros_distribution }}
           package-name: |
             pkg_test
-          skip-rosdep: false
-          import-token: ${{ secrets.GH_TOKEN }}
-          vcs-repo-file-url: ""
